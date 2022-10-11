@@ -4,7 +4,7 @@ FROM node:16.17.1-buster-slim
 RUN apt-get update && apt-get install -y curl && apt-get install -y gnupg2
 
 # Install Nodejs version 16.
-RUN curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
+RUN curl -sL https://deb.nodesource.com/setup_16.17.1 -o /tmp/nodesource_setup.sh
 
 # Install Yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
