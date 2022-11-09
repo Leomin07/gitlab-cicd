@@ -28,7 +28,9 @@ sudo apt-get upgrade -y
 - sudo n stable
 - hash -r
 4. Install nginx
+```
 https://www.linode.com/docs/web-servers/nginx/use-nginx-reverse-proxy/
+```
 - sudo apt-get update
 - sudo apt-get install nginx
 - sudo nano /etc/nginx/nginx.conf
@@ -48,14 +50,18 @@ server {
 - sudo nginx -t
 - sudo nginx -s reload
 # Setting SSL
+```
 https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04
+```
 - sudo apt-get update
 - sudo apt-get install python3-certbot-nginx
 - sudo certbot --nginx -d api.growth-capability.com
 Auto renew ssl
 - sudo certbot renew --dry-run
 5. Install mongodb
+```
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+```
 # To remove an already installed MongoDB
 - sudo apt-get purge mongodb-org*
 - sudo rm -r /var/log/mongodb
