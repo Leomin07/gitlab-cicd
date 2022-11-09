@@ -156,6 +156,7 @@ Open fire wall ubuntu
 ```
 https://www.cyberciti.biz/faq/how-to-configure-firewall-with-ufw-on-ubuntu-20-04-lts/
 ```
+```
 sudo ufw status
 sudo ufw default allow outgoing
 Default outgoing policy changed to 'allow'
@@ -164,7 +165,7 @@ sudo ufw allow ssh
 Rules updated
 Rules updated (v6)
 sudo ufw enable
-
+```
 MongoDB 5.0
 ```
 wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
