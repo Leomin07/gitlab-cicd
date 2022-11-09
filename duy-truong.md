@@ -1,10 +1,12 @@
 On server terminel.
+```
 ssh ubuntu@13.250.34.2
 scp build.zip ubuntu@54.255.112.89:/var/www/html/threemusketeers
 https://418912162951.signin.aws.amazon.com/console
 ssh ubuntu@54.255.112.89
 make swap   
 https://linuxize.com/post/how-to-add-swap-space-on-ubuntu-20-04
+````
 # Enable ssh connect.
 1. Install SSH
 - sudo apt install ssh
@@ -89,8 +91,11 @@ CREATE DATABASE runcrew CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 - pm2 start dist/index.js(on dotakyan project)
 -DONE-
 # Create s3 upload
+```
 https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bu
 c0k0e0t0555.html
+```
+
 server {
   server_name rcr-api.stg1.amelacorp.com;
   location / {
@@ -141,7 +146,9 @@ sudo ufw allow ssh
 Rules updated
 Rules updated (v6)
 sudo ufw enable
+
 MongoDB 5.0
+```
 wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
 sudo apt-get install gnupg
 wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
@@ -149,3 +156,4 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb
 sudo apt-get install -y mongodb-org
 sudo systemctl start mongod
 sudo systemctl status mongod
+```
