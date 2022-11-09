@@ -61,18 +61,23 @@ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
 - sudo rm -r /var/log/mongodb
 - sudo rm -r /var/lib/mongodb
 # Install mongo
+```
 - sudo apt-get install gnupg
 - wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
-- echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+- echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-
+```
+4.list
 - sudo apt-get update
 - sudo apt-get install -y mongodb-org
 - sudo systemctl start mongod
 - sudo systemctl daemon-reload
 - sudo systemctl enable mongod
 - sudo systemctl restart mongod
+```
 wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 sudo dpkg -i ./libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 rm -i libssl1.1_1.1.0g-2ubuntu4_amd64.deb
+```
 6. Install redis
 - sudo apt update
 - sudo apt install redis
@@ -95,7 +100,7 @@ CREATE DATABASE runcrew CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bu
 c0k0e0t0555.html
 ```
-
+```
 server {
   server_name rcr-api.stg1.amelacorp.com;
   location / {
@@ -110,6 +115,8 @@ server {
     proxy_set_header X-Forwarded-Proto $scheme;
   }
 }
+```
+```
 server {
     server_name rcr-cms.stg1.amelacorp.com;
     # gzip
@@ -125,7 +132,9 @@ server {
        try_files $uri /$1/index.html /index.html;
     }
 }
+```
 // Create backup mysql
+```
 mkdir backup
 sudo vi backup.sh
 mysqldump -u runcrew -p'Amela@123a@' runcrew | gzip>/home/ubuntu/backup/runcrew _`date +"%y%m%d_%H%M%S"`.sql.gz
@@ -133,11 +142,14 @@ find /home/ubuntu/backup -mtime +13 -type f -delete
 crontab -e
 mm hh * * *
 ```
+```
 29 11 * * * /bin/bash /home/ubuntu/backup.sh
 ```
 Khi bắt đầu 1 con server cần bật tường lửa.
 Open fire wall ubuntu
+```
 https://www.cyberciti.biz/faq/how-to-configure-firewall-with-ufw-on-ubuntu-20-04-lts/
+```
 sudo ufw status
 sudo ufw default allow outgoing
 Default outgoing policy changed to 'allow'
