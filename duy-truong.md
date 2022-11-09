@@ -90,6 +90,7 @@ rm -i libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 - sudo systemctl start redis-server
 - sudo systemctl status redis
 7. Install mysql-server
+```
 - sudo apt update
 - sudo apt install mysql-server
 Setup mysql and create new username: dotachan, password: Amela@123a@
@@ -101,6 +102,7 @@ CREATE DATABASE runcrew CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 - npm i -g pm2
 - pm2 start dist/index.js(on dotakyan project)
 -DONE-
+```
 # Create s3 upload
 ```
 https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bu
