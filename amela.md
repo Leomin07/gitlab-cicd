@@ -127,7 +127,7 @@ CREATE USER 'runcrew'@'%' IDENTIFIED WITH mysql_native_password BY 'Amela@123a@'
 ```
 GRANT ALL PRIVILEGES ON *.* TO 'runcrew'@'%' WITH GRANT OPTION;
 ```
-``
+```
 FLUSH PRIVILEGES;
 ```
 ```
@@ -141,7 +141,6 @@ npm i -g pm2
 pm2 start dist/index.js(on dotakyan project)
 ```
 -DONE-
-```
 # Create s3 upload
 ```
 https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bu
