@@ -68,39 +68,77 @@ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
 - sudo rm -r /var/lib/mongodb
 # Install mongo
 ```
-- sudo apt-get install gnupg
-- wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
-- echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-
+sudo apt-get install gnupg
+```
+```
+wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+```
+```
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-
 ```
 4.list
-- sudo apt-get update
-- sudo apt-get install -y mongodb-org
-- sudo systemctl start mongod
-- sudo systemctl daemon-reload
-- sudo systemctl enable mongod
-- sudo systemctl restart mongod
+```
+sudo apt-get update
+```
+```
+sudo apt-get install -y mongodb-org
+```
+```
+sudo systemctl start mongod
+```
+```
+sudo systemctl daemon-reload
+```
+```
+sudo systemctl enable mongod
+```
+```
+sudo systemctl restart mongod
 ```
 wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 sudo dpkg -i ./libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 rm -i libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 ```
 6. Install redis
-- sudo apt update
-- sudo apt install redis
-- sudo systemctl start redis-server
-- sudo systemctl status redis
+```
+sudo apt update
+```
+```
+sudo apt install redis
+```
+```
+sudo systemctl start redis-server
+```
+```
+sudo systemctl status redis
+```
 7. Install mysql-server
 ```
-- sudo apt update
-- sudo apt install mysql-server
+sudo apt update
+```
+```
+sudo apt install mysql-server
+```
 Setup mysql and create new username: dotachan, password: Amela@123a@
+```
 CREATE USER 'runcrew'@'%' IDENTIFIED WITH mysql_native_password BY 'Amela@123a@';
+```
+```
 GRANT ALL PRIVILEGES ON *.* TO 'runcrew'@'%' WITH GRANT OPTION;
+```
+``
 FLUSH PRIVILEGES;
+```
+```
 CREATE DATABASE runcrew CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
 8. Install pm2
-- npm i -g pm2
-- pm2 start dist/index.js(on dotakyan project)
+```
+npm i -g pm2
+```
+```
+pm2 start dist/index.js(on dotakyan project)
+```
 -DONE-
 ```
 # Create s3 upload
@@ -171,10 +209,22 @@ sudo ufw enable
 MongoDB 5.0
 ```
 wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+```
+```
 sudo apt-get install gnupg
+```
+```
 wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+```
+```
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+```
+```
 sudo apt-get install -y mongodb-org
+```
+```
 sudo systemctl start mongod
+```
+```
 sudo systemctl status mongod
 ```
